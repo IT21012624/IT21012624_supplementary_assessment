@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">IT21012624 supplementary assessment</string>
+    <string name="loer">LOER</string>
+    <string name="coffeeShop">Coffee Shop</string>
+    <string name="email">Email:</string>
+    <string name="Email">coffee@gmail.com</string>
+    <string name="todo">TODO</string>
+    <string name="password">Password:</string>
+    <string name="Password">abc@123</string>
+    <string name="login">Login</string>
+    <string name="notAccount">Do not have account?</string>
+    <string name="signup">Sign Up</string>
+    <string name="createAccount">Create Account</string>
+    <string name="username">User Name</string>
+    <string name="Username">username</string>
+    <string name="editprofile">EDIT</string>
+    <string name="editProfile">Edit Profile</string>
+    <string name="search">Search</string>
+    <string name="delete">Delete</string>
+    <string name="updateProfile">Update Profile</string>
+</resources>
