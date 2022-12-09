@@ -35,12 +35,13 @@ public class DBHandler extends SQLiteOpenHelper {
                     UserProfile.Users._ID + " INTEGER PRIMARY KEY," +
                     UserProfile.Users.COLUMN_1 + " TEXT," +
                     UserProfile.Users.COLUMN_2 + " TEXT," +
-                    UserProfile.Users.COLUMN_3 + " TEXT)";
+                    UserProfile.Users.COLUMN_3 + " TEXT," +
+                    UserProfile.Users.COLUMN_4 + " TEXT)";
 
     private static final String SQL_DELETE_ENTRIES =
             "DROP TABLE IF EXISTS " + UserProfile.Users.TABLE_NAME;
 
-    public long addInfo (String username, String email, String password){
+    public long addInfo (String username, String email, String gender, String password){
         // Gets the data repository in write mode
         SQLiteDatabase db = getWritableDatabase();
 
@@ -48,7 +49,8 @@ public class DBHandler extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(UserProfile.Users.COLUMN_1, username);
         values.put(UserProfile.Users.COLUMN_2, email);
-        values.put(UserProfile.Users.COLUMN_3, password);
+        values.put(UserProfile.Users.COLUMN_3, gender);
+        values.put(UserProfile.Users.COLUMN_4, password);
 
         // Insert the new row, returning the primary key value of the new row
         long newRowId = db.insert(UserProfile.Users.TABLE_NAME, null, values);
@@ -56,15 +58,15 @@ public class DBHandler extends SQLiteOpenHelper {
         return newRowId;
     }
 
-    public boolean updateInfo(String username, String email, String password){
+    public boolean updateInfo(String username, String email, String gender, String password){
 
         SQLiteDatabase db = getWritableDatabase();
 
         // New value for one column
         ContentValues values = new ContentValues();
-        values.put(UserProfile.Users.COLUMN_1, username);
         values.put(UserProfile.Users.COLUMN_2, email);
-        values.put(UserProfile.Users.COLUMN_3, password);
+        values.put(UserProfile.Users.COLUMN_3, gender);
+        values.put(UserProfile.Users.COLUMN_4, password);
 
         // Which row to update, based on the title
         String selection = UserProfile.Users.COLUMN_1 + " LIKE ?";
@@ -99,7 +101,7 @@ public class DBHandler extends SQLiteOpenHelper {
 
     public List readAllInfo(){
 
-        String username = "";
+        String username = "Dinu";
         SQLiteDatabase db = getReadableDatabase();
 
         // Define a projection that specifies which columns from the database
@@ -108,7 +110,8 @@ public class DBHandler extends SQLiteOpenHelper {
                 BaseColumns._ID,
                 UserProfile.Users.COLUMN_1,
                 UserProfile.Users.COLUMN_2,
-                UserProfile.Users.COLUMN_3
+                UserProfile.Users.COLUMN_3,
+                UserProfile.Users.COLUMN_4
         };
 
         // Filter results WHERE "title" = 'username'
@@ -148,7 +151,8 @@ public class DBHandler extends SQLiteOpenHelper {
                 BaseColumns._ID,
                 UserProfile.Users.COLUMN_1,
                 UserProfile.Users.COLUMN_2,
-                UserProfile.Users.COLUMN_3
+                UserProfile.Users.COLUMN_3,
+                UserProfile.Users.COLUMN_4
         };
 
         // Filter results WHERE "title" = 'username'
@@ -173,12 +177,57 @@ public class DBHandler extends SQLiteOpenHelper {
         while(cursor.moveToNext()) {
             String user = cursor.getString(cursor.getColumnIndexOrThrow(UserProfile.Users.COLUMN_1));
             String email = cursor.getString(cursor.getColumnIndexOrThrow(UserProfile.Users.COLUMN_2));
-            String password = cursor.getString(cursor.getColumnIndexOrThrow(UserProfile.Users.COLUMN_3));
+            String gender = cursor.getString(cursor.getColumnIndexOrThrow(UserProfile.Users.COLUMN_3));
+            String pass = cursor.getString(cursor.getColumnIndexOrThrow(UserProfile.Users.COLUMN_4));
             userInfo.add(user);//0
             userInfo.add(email);//1
-            userInfo.add(password);//2
+            userInfo.add(gender);//2
+            userInfo.add(pass);//3
         }
         cursor.close();
         return userInfo;
+    }
+    public boolean loginUser (String email, String password){
+        SQLiteDatabase db = getReadableDatabase();
+
+        // Define a projection that specifies which columns from the database
+        // you will actually use after this query.
+        String[] projection = {
+                BaseColumns._ID,
+                UserProfile.Users.COLUMN_2,
+                UserProfile.Users.COLUMN_4
+        };
+
+        // Filter results WHERE "title" = 'My Title'
+        String selection = UserProfile.Users.COLUMN_2 + " = ? AND "+ UserProfile.Users.COLUMN_4 + " = ?";
+        String[] selectionArgs = { email, password };
+
+        // How you want the results sorted in the resulting Cursor
+        String sortOrder =
+                UserProfile.Users.COLUMN_2 + " ASC";
+
+        Cursor cursor = db.query(
+                UserProfile.Users.TABLE_NAME,   // The table to query
+                projection,             // The array of columns to return (pass null to get all)
+                selection,              // The columns for the WHERE clause
+                selectionArgs,          // The values for the WHERE clause
+                null,                   // don't group the rows
+                null,                   // don't filter by row groups
+                sortOrder               // The sort order
+        );
+
+        List validUser = new ArrayList();
+        while(cursor.moveToNext()) {
+            String user = cursor.getString(cursor.getColumnIndexOrThrow(UserProfile.Users.COLUMN_2));
+            validUser.add(user);
+        }
+        cursor.close();
+
+        if (validUser.isEmpty()) {
+            return false;
+        }
+        else {
+            return true;
+        }
     }
 }

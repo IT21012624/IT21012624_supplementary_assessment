@@ -28,7 +28,7 @@
         android:text="@string/username"
         android:textAllCaps="false"
         android:textColor="#000000"
-        android:textSize="22sp" />
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/etUsernameCA"
@@ -36,13 +36,13 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="20dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/Username"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:textColorHint="#546E7A"
-        android:autofillHints="" />
+        android:textColorHint="#546E7A" />
 
     <TextView
         android:id="@+id/textView6"
@@ -52,7 +52,7 @@
         android:layout_marginRight="30dp"
         android:text="@string/email"
         android:textColor="#000000"
-        android:textSize="22sp" />
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/etEmailCA"
@@ -60,13 +60,47 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="20dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/Email"
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
-        android:textColorHint="#546E7A"
-        android:autofillHints="" />
+        android:textColorHint="#546E7A" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="@string/gender"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <RadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:checked="true"
+        android:text="@string/male"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <RadioButton
+        android:id="@+id/radioButton2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/female"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView7"
@@ -76,7 +110,7 @@
         android:layout_marginRight="30dp"
         android:text="@string/password"
         android:textColor="#000000"
-        android:textSize="22sp" />
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/etPasswordCA"
@@ -84,13 +118,13 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="20dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/Password"
         android:inputType="textPassword"
         android:minHeight="48dp"
-        android:textColorHint="#616161"
-        android:autofillHints="" />
+        android:textColorHint="#616161" />
 
     <Button
         android:id="@+id/btnSignupCA"

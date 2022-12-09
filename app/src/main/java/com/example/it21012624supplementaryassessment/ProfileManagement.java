@@ -57,6 +57,11 @@ public class ProfileManagement extends AppCompatActivity {
 
                 Intent i = new  Intent(getApplicationContext(),EditProfile.class);
                 startActivity(i);
+                username.setText(null);
+                email.setText(null);
+                male.setChecked(true);
+                female.setChecked(false);
+                password.setText(null);
             }
         });
 

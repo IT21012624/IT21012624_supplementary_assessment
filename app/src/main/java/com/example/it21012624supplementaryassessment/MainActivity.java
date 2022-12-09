@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import com.example.it21012624supplementaryassessment.Database.DBHandler;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,8 +37,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent i = new Intent(getApplicationContext(),CreateAccount.class);
-                startActivity(i);
+                DBHandler dbHandler = new DBHandler(getApplicationContext());
+                if (dbHandler.loginUser(email.getText().toString(), password.getText().toString())){
+                    Toast.makeText(MainActivity.this, "Logged in Scuccessfully", Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(getApplicationContext(),EditProfile.class);
+                }
+                else {
+                    Toast.makeText(MainActivity.this, "No User or Invalid User Details", Toast.LENGTH_SHORT).show();
+                    email.setText(null);
+                    password.setText(null);
+                }
             }
         });
 

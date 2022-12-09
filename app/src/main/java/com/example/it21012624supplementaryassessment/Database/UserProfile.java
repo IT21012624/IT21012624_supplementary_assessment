@@ -11,6 +11,7 @@ public final class UserProfile {
         public static final String TABLE_NAME = "USerInfo";
         public static final String COLUMN_1 = "userName";
         public static final String COLUMN_2 = "email";
-        public static final String COLUMN_3 = "password";
+        public static final String COLUMN_3 = "gender";
+        public static final String COLUMN_4 = "password";
     }
 }

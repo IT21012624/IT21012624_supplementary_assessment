@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="30dp"
         android:text="@string/editProfile"
         android:textAlignment="center"
         android:textColor="#BB6A50"
@@ -28,7 +28,7 @@
         android:layout_marginRight="30dp"
         android:text="@string/username"
         android:textColor="#000000"
-        android:textSize="22sp" />
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/etUsernameEP"
@@ -36,11 +36,12 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="20dp"
         android:ems="10"
         android:hint="@string/Username"
         android:inputType="textPersonName"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/btnSearchEP"
@@ -48,9 +49,10 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="100dp"
         android:layout_marginRight="100dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="20dp"
         android:backgroundTint="#BB6A50"
-        android:text="@string/search" />
+        android:text="@string/search"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/textView9"
@@ -60,7 +62,7 @@
         android:layout_marginRight="30dp"
         android:text="@string/email"
         android:textColor="#000000"
-        android:textSize="22sp" />
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/etEmaiEP"
@@ -68,11 +70,44 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="10dp"
         android:ems="10"
         android:hint="@string/Email"
         android:inputType="textEmailAddress"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="@string/gender"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <RadioButton
+        android:id="@+id/radioButton3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:checked="true"
+        android:text="@string/male"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <RadioButton
+        android:id="@+id/radioButton4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/female"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView10"
@@ -82,7 +117,7 @@
         android:layout_marginRight="30dp"
         android:text="@string/password"
         android:textColor="#000000"
-        android:textSize="22sp" />
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/etPasswordEP"
@@ -90,7 +125,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="10dp"
         android:ems="10"
         android:hint="@string/Password"
         android:inputType="textPassword"
@@ -104,7 +139,8 @@
         android:layout_marginRight="100dp"
         android:layout_marginBottom="10dp"
         android:backgroundTint="#BA6A50"
-        android:text="@string/editprofile" />
+        android:text="@string/editprofile"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/btnDeleteEP"
