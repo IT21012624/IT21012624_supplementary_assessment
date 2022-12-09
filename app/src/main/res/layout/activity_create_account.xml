@@ -101,6 +101,7 @@
         android:layout_marginBottom="10dp"
         android:backgroundTint="#BC6A50"
         android:text="@string/signup"
+        android:textColor="#FFFFFF"
         tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
 
 </LinearLayout>
