@@ -88,7 +88,8 @@
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:backgroundTint="#BC6A50"
-        android:text="@string/login" />
+        android:text="@string/login"
+        tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -114,11 +115,11 @@
             android:id="@+id/etsignUpM"
             android:layout_width="78dp"
             android:layout_height="22dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
             android:hint="@string/signup"
             android:text="@string/signup"
             android:textAlignment="center"
-            android:textColor="#BB6A50"
+            android:textColor="#DD2C00"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

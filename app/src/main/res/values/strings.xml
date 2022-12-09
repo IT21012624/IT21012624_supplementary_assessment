@@ -28,4 +28,8 @@
     <string name="account_fragment">Account Fragment</string>
     <string name="menu_fragment">Menu Fragment</string>
     <string name="my_order_fragment">My Order Fragment</string>
+    <string name="quote">Coffee - Makes you Love</string>
+    <string name="quote2">A Lot Can Happen Over Coffee, Its Awesome!!!</string>
+    <string name="getStarted">"Get Started "</string>
+    <string name="start">Get Started</string>
 </resources>

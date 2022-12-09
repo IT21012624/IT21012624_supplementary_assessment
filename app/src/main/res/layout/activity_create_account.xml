@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+        xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/ca"
@@ -41,7 +40,9 @@
         android:ems="10"
         android:hint="@string/Username"
         android:inputType="textPersonName"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:textColorHint="#546E7A"
+        android:autofillHints="" />
 
     <TextView
         android:id="@+id/textView6"
@@ -63,7 +64,9 @@
         android:ems="10"
         android:hint="@string/Email"
         android:inputType="textEmailAddress"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:textColorHint="#546E7A"
+        android:autofillHints="" />
 
     <TextView
         android:id="@+id/textView7"
@@ -85,7 +88,9 @@
         android:ems="10"
         android:hint="@string/Password"
         android:inputType="textPassword"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:textColorHint="#616161"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/btnSignupCA"
@@ -95,6 +100,7 @@
         android:layout_marginRight="100dp"
         android:layout_marginBottom="10dp"
         android:backgroundTint="#BC6A50"
-        android:text="@string/signup" />
+        android:text="@string/signup"
+        tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
 
 </LinearLayout>
