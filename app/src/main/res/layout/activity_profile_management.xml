@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ca"
+    android:orientation="vertical"
+    tools:context=".ProfileManagement">
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="40dp"
+        android:text="@string/profileMangement"
+        android:textAlignment="center"
+        android:textColor="#BB6A50"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="@string/username"
+        android:textColor="#000000"
+        android:textSize="22sp" />
+
+    <EditText
+        android:id="@+id/etUsernamePM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:hint="@string/Username"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColorHint="#546E7A"
+        android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="@string/email"
+        android:textColor="#000000"
+        android:textSize="22sp" />
+
+    <EditText
+        android:id="@+id/etEmailPM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:hint="@string/Email"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        tools:ignore="TextContrastCheck"
+        android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="@string/gender"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <RadioButton
+        android:id="@+id/radioButton5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:checked="true"
+        android:text="@string/male"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <RadioButton
+        android:id="@+id/radioButton6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/female"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="@string/password"
+        android:textColor="#000000"
+        android:textSize="22sp" />
+
+    <EditText
+        android:id="@+id/etPasswordPM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:hint="@string/Password"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/btnAddPM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#BB6A50"
+        android:text="@string/add"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/btnUpdateProfilePM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:backgroundTint="#BB6A50"
+        android:text="@string/updateProfile" />
+
+</LinearLayout>

@@ -57,4 +57,9 @@
     <string name="todo3">TODO</string>
     <string name="todo5">TODO</string>
     <string name="todo6">TODO</string>
+    <string name="profileMangement">Profile Management</string>
+    <string name="add">Add</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
 </resources>
